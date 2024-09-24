@@ -5,8 +5,10 @@ namespace Data_Access.Implementations
 {
     public class CommentRepository : Repository<Comment>, ICommentRepository
     {
-        public CommentRepository(TechBlogDbContext context) : base(context)
+        private TechBlogDbContext _commentContext;
+        public CommentRepository(TechBlogDbContext commentContext) : base(commentContext)
         {
+            _commentContext = commentContext;
         }
     }
 }

@@ -41,7 +41,7 @@ namespace Data_Access.Implementations
         public bool Update(T entity)
         {
             _table.Update(entity);
-            return _context .SaveChanges() > 0;
+            return _context.SaveChanges() > 0;
         }
     }
 }
