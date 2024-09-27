@@ -11,5 +11,6 @@ namespace Services.Interfaces
         bool Update(PostCreateDto entity, int id);
         //bool Delete(PostDto entity);
         bool DeleteById(int id);
+        List<PostDto> GetPaginatedPosts(int pageIndex);
     }
 }

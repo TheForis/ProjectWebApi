@@ -54,6 +54,8 @@ namespace TechBlogApi
                 
                 );
 
+            //builder.Services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
+
             DependencyInjectionHelper.InjectServices(builder.Services);
             DependencyInjectionHelper.InjectRepositories(builder.Services);
 

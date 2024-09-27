@@ -1,8 +1,4 @@
-﻿using Domain_Models.Enums;
-using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Domain_Models
+﻿namespace Domain_Models
 {
     public class Post : Base
     {
@@ -15,14 +11,13 @@ namespace Domain_Models
         public List<Comment> Comments { get; set; }
         public DateTime PostingTime { get; set; }
         public string Image {  get; set; }
-
         public string Tags { get; set; }
 
-        [NotMapped]
-        public List<Tag> TagList
-        {
-            get => Tags.Split(',').Select(t => Enum.Parse<Tag>(t)).ToList();
-            set => Tags = string.Join(",", value);
-        }
+        //[NotMapped]
+        //public List<Tag> TagList
+        //{
+        //    get => Tags.Split(',').Select(t => Enum.Parse<Tag>(t)).ToList();
+        //    set => Tags = string.Join(",", value);
+        //}
     }
 }
